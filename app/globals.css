@@ -15,7 +15,7 @@
   padding: 0.5rem 1rem;
   font-weight: 500;
   color: #ffffff;
-  background-color: #05c46b;
+  background-color: transparent;
   border-width: 1px;
   border-color: #ffffff;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
@@ -68,4 +68,27 @@
 }
 .btn3-custom:hover {
   background-color: #20c977;
+}
+.btn4-custom {
+  display: inline-block;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #05c46b;
+  background-color: transparent;
+  border-width: 1px;
+  border-color: #05c46b;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+.btn4-custom:hover {
+  color: #ffffff;
+  background-color: #05c46b;
 }

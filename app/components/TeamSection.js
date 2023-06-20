@@ -7,19 +7,12 @@ import Notification from "./Notification";
 const TeamSection = () => {
   return (
     <>
-      <Disclosure>
+      <Disclosure as="nav">
         {/* <div className="accordion mb-3" id="accordionCreativeTeam">
           <div className="accordion-item"> */}
         <Disclosure.Button>
-          <h2 className="accordion-header" id="headingOne">
-            <button
-              className="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
+          {({ open }) => (
+            <div className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="9"
@@ -36,8 +29,19 @@ const TeamSection = () => {
                 />
               </svg>
               <span className="ms-2">Creative team</span>
-            </button>
-          </h2>
+              <svg
+                className="ml-auto h-5 w-5 transform"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d={open ? "M5.5 8.5L10 13l4.5-4.5" : "M5.5 10.5L10 6l4.5 4.5"}
+                />
+              </svg>
+            </div>
+          )}
         </Disclosure.Button>
         <Disclosure.Panel>
           {/* <div
@@ -47,7 +51,7 @@ const TeamSection = () => {
             data-bs-parent="#accordionCreativeTeam"
           > */}
           {/* <!-- Team member - 1 -->  */}
-          <div className="row tasks-wrapper">
+          <div className="row tasks-wrapper flex items-center">
             {/* <!-- Start lane - Team --> */}
             <div className="col col-lg-2">
               <div className="card border-0">
@@ -215,12 +219,12 @@ const TeamSection = () => {
             {/* <!-- End lane - Team --> */}
 
             <div className="row justify-content-end">
-              <div className="col-12 col-lg-6 text-end my-1">
-                <button type="button" className="btn btn-outline-primary">
+              <div className="col-12 col-lg-6 text-end my-1 ">
+                <button type="button" className="btn4-custom m-1">
                   <span>Optimize team</span>
                 </button>
 
-                <button type="button" className="btn btn-primary ms-1">
+                <button type="button" className="btn3-custom m-1">
                   <span>Publish team</span>
                 </button>
               </div>
