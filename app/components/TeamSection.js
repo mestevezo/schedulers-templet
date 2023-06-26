@@ -18,9 +18,13 @@ const handlerOptimizeTeam = async () => {
     });
 };
 
-const TeamSection = () => {
+
+const TeamSection = ({OpData}) => {
+  console.log(OpData)
+  const sections = ["All"]
   return (
     <>
+    { sections.map( (section) => (
       <Disclosure as="nav">
         {/* <div className="accordion mb-3" id="accordionCreativeTeam">
           <div className="accordion-item"> */}
@@ -43,7 +47,7 @@ const TeamSection = () => {
                     r="4.5"
                   />
                 </svg>
-                <span className="text-gray-900">Creative team</span>
+                <span className="text-gray-900">{section}</span>
                 <svg
                   className={
                     open
@@ -65,7 +69,7 @@ const TeamSection = () => {
         </Disclosure.Button>
         <Disclosure.Panel className="p-6">
           {/* kanban */}
-          <Kanban className="bg-white" />
+          <Kanban className="bg-white" opData={OpData}/>
           {/* kanban */}
 
           <div className="row justify-content-end">
@@ -86,6 +90,7 @@ const TeamSection = () => {
           {/* </div> */}
         </Disclosure.Panel>
       </Disclosure>
+))}
     </>
   );
 };

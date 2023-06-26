@@ -1,4 +1,25 @@
-const Navbar = () => {
+"use client"
+
+const Navbar = ({setOnLoading, OpData}) => {
+
+  
+  const handleOptimization = async () => {
+    setOnLoading(true)
+    fetch(`http://localhost:5000/moptimize?taskcase=0`, {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        //console.log(data);
+        OpData(data)
+        setOnLoading(false)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
       <nav className="flex bg-jade pt-1.875 pb-1.875 h-14">
@@ -8,7 +29,7 @@ const Navbar = () => {
           </button>
 
           <div className="flex items-center justify-end flex-1">
-            <button type="button" className="btn-custom m-2">
+            <button type="button" className="btn-custom m-2" onClick={handleOptimization}>
               <span className="m-2">Optimize all teams</span>
             </button>
 

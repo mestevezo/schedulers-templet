@@ -5,6 +5,11 @@ import {
 } from "@syncfusion/ej2-react-kanban";
 import "./css/style.css";
 
+
+const Kanban = ({opData}) => {
+  console.log("Data entrando al Kanban >" , opData)
+
+/*   
 const employees = [
   {
     ID: 0,
@@ -762,8 +767,10 @@ const employees = [
       EMAILS: ["HTML", "FRONTEND"],
     },
   },
-];
-const optData = [
+]; */
+
+const employees = opData?.employees;
+/* const optData = [
   {
     TaskID: "36_1",
     TaskName: "Task 36 - Part 1",
@@ -2234,7 +2241,8 @@ const optData = [
     Hours: 1,
     Total_Hours: 5,
   },
-];
+]; */ 
+const optData =  opData?.format_result;
 const kanbanGrid = [
   {
     headerText: "Monday",
@@ -2271,7 +2279,7 @@ const kanbanGrid = [
     isExpanded: true,
   },
 ];
-const employee_available_times = [
+/* const employee_available_times = [
   [0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0],
   [4, 8, 7, 7, 4],
@@ -2320,12 +2328,13 @@ const employee_available_times = [
   [4, 4, 4, 4, 4],
   [4, 4, 4, 4, 4],
   [4, 4, 4, 4, 4],
-];
+];  */
+const employee_available_times = opData?.initial_employee_available_times
 const dayName = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
 let optData2 = [];
 
-employees.forEach((employee, idxEmployee) => {
+employees?.forEach((employee, idxEmployee) => {
   dayName.forEach((day, idxDay) => {
     optData2.push({
       Counter: true,
@@ -2353,10 +2362,11 @@ optData2.push(...[...optData].map(x => {
   x.Block = false;
 }));
 */
+if(optData){optData2.push(...optData);}
 
-optData2.push(...optData);
 
-const Kanban = () => {
+  
+
   let kanbanObj;
 
   function cardTemplate(props) {
@@ -2416,13 +2426,13 @@ const Kanban = () => {
           </div>
           <div className="form-check form-switch mt-1 mb-0">
             <input
-              class="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-red-500 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-red-300 checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary  checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100   dark:bg-red-600 dark:after:bg-red-300"
+              className="mr-2 mt-[0.3rem] h-3.5 w-8 appearance-none rounded-[0.4375rem] before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-red-500 checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-red-300 checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary  checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100   dark:bg-gray-600 dark:after:bg-gray-300"
               type="checkbox"
               id="flexSwitchCheckDefault"
             />
             <label
               class="inline-block pl-[0.15rem] hover:cursor-pointer"
-              for="flexSwitchCheckDefault"
+              htmlfor="flexSwitchCheckDefault"
             >
               Block
             </label>
