@@ -49,7 +49,7 @@ const NavbarOptions = () => {
             </Link>
             <Disclosure as="nav">
               <Disclosure.Button
-                className="dropdown flex items-center justify-center btn3-custom"
+                className="dropdown flex items-center justify-center btn3-custom mr-4"
                 type="button"
                 data-toggle="dropdown"
               >

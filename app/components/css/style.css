@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Nexa-Regular";
+  src: url("webFonts/Nexa-Regular/font.woff2") format("woff2"),
+    url("webFonts/Nexa-Regular/font.woff") format("woff");
+}
+@font-face {
+  font-family: "Nexa-Bold";
+  src: url("webFonts/Nexa-Bold/font.woff2") format("woff2"),
+    url("webFonts/Nexa-Bold/font.woff") format("woff");
+}
+@font-face {
+  font-family: "Nexa-Heavy";
+  src: url("webFonts/Nexa-Heavy/font.woff2") format("woff2"),
+    url("webFonts/Nexa-Heavy/font.woff") format("woff");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Nexa-Heavy" !important;
+}
+
+.btn,
+a,
+b,
+h5.card-title,
+.alert,
+.modal h4 {
+  font-family: "Nexa-Bold" !important;
+}
+
+li,
+span,
+p,
+select,
+.txt {
+  font-family: "Nexa-Regular" !important;
+}
+
+i.fi.fi-rr-note {
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+
+footer .text-muted {
+  color: #5d5d5d !important;
+  font-size: 0.75rem;
+}
+footer .btn {
+  font-size: 0.875rem;
+}
+
+body {
+  background-color: #f4f6fa;
+}
+
+.e-kanban .e-kanban-table .e-kanban .e-kanban-header .e-header-cells {
+  background-color: #ffffff;
+  border-radius: 4;
+  color: #5d5d5d;
+}

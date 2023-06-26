@@ -24,42 +24,48 @@ const TeamSection = () => {
       <Disclosure as="nav">
         {/* <div className="accordion mb-3" id="accordionCreativeTeam">
           <div className="accordion-item"> */}
-        <Disclosure.Button>
+        <Disclosure.Button className="w-full">
           {({ open }) => (
-            <div className="flex items-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="9"
-                height="9"
-                viewBox="0 0 9 9"
-              >
-                <circle
-                  id="Ellipse_8"
-                  data-name="Ellipse 8"
-                  cx="4.5"
-                  cy="4.5"
-                  r="4.5"
-                  fill="#07dd87"
-                />
-              </svg>
-              <span className="ms-2">Creative team</span>
-              <svg
-                className="ml-auto h-5 w-5 transform"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fillRule="evenodd"
-                  d={open ? "M5.5 8.5L10 13l4.5-4.5" : "M5.5 10.5L10 6l4.5 4.5"}
-                />
-              </svg>
+            <div className="w-full p-6">
+              <div className="flex items-center bg-white p-4 rounded-lg max-w-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="9"
+                  height="9"
+                  viewBox="0 0 9 9"
+                  className="mr-2 text-green-500 fill-current"
+                >
+                  <circle
+                    id="Ellipse_8"
+                    data-name="Ellipse 8"
+                    cx="4.5"
+                    cy="4.5"
+                    r="4.5"
+                  />
+                </svg>
+                <span className="text-gray-900">Creative team</span>
+                <svg
+                  className={
+                    open
+                      ? "w-5 h-5 transform rotate-180 ml-auto items-end"
+                      : "w-5 h-5 ml-auto items-end"
+                  }
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 7l5 5 5-5" />
+                </svg>
+              </div>
             </div>
           )}
         </Disclosure.Button>
-        <Disclosure.Panel>
+        <Disclosure.Panel className="p-6">
           {/* kanban */}
-          <Kanban />
+          <Kanban className="bg-white" />
           {/* kanban */}
 
           <div className="row justify-content-end">
