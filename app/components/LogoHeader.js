@@ -4,7 +4,7 @@ const LogoHeader = () => {
   return (
     <>
       <nav className="border-b border-platinum bg-white">
-        <div className="my-4 mx-6 ">
+        <div className="py-4 mx-6 ">
           <Link className="" href="/">
             <svg
               xmlns="http://www.w3.org/2000/svg"

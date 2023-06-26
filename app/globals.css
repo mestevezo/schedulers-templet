@@ -94,3 +94,34 @@
   color: #ffffff;
   background-color: #05c46b;
 }
+.e-kanban .e-kanban-table .e-kanban {
+  background-color: #ffffff;
+  border-radius: 4;
+  color: #5d5d5d;
+}
+/* .toggle-checkbox:checked ~ .toggle-switch-background {
+  background-color: #48bb78;
+}
+
+.toggle-checkbox:checked ~ .toggle-switch-handle {
+  transform: translateX(110%);
+}
+.toggle-switch-ring {
+  height: 1.25rem;
+  width: 2rem;
+  bottom: 0.125rem;
+  left: 0.125rem;
+}
+
+.toggle-switch-background {
+  transition: transform 0.2s ease-out, background-color 0.1s ease-out;
+}
+
+.toggle-switch-handle {
+  height: 0.75rem;
+  width: 0.75rem;
+  border: 2px solid #dee2e6;
+  top: 0.125rem;
+  left: 0.125rem;
+  transition: transform 0.2s ease-out;
+} */
